@@ -1,5 +1,3 @@
-import './App.scss';
-import PurchaseHistoryChart from './components/PurchaseHistoryChart';
 
 function App() {
 
