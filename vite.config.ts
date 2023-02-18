@@ -8,4 +8,7 @@ export default defineConfig({
   worker: {
     plugins: [comlink()],
   },
+  server: {
+    port: 3500,
+  },
 })
