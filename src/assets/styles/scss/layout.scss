@@ -1,0 +1,42 @@
+@import 'sidebar';
+@import 'header';
+@import 'footer';
+
+.layout{
+
+    
+}
+
+.layout--header{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    z-index:10
+}
+
+.layout--sidebar{
+    
+}
+
+.layout--container{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    // bottom: 0;
+    // margin: 0;
+}
+
+.layout--body{
+    width: 100%;
+    height: 100%;
+}
+
+.layout--footer{
+    background-color: black;
+    height: 5rem;
+    width: 100%;
+}
