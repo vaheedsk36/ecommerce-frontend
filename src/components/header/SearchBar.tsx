@@ -8,15 +8,16 @@ const SearchBar = () => {
     const [isSearchClicked,setIsSearchClicked] = useState<boolean>(false);
     let searchBarWidth = $('.search-bar').outerWidth();
     let searchDropDownWidth = $('.search-bar--dropdown').outerWidth();
+    let viewportWidth = $(window).width();
 
     useEffect(()=>{
         if(isSearchClicked){
-            if(searchBarWidth && searchDropDownWidth){
-                let searchOptionWidth = searchBarWidth - searchDropDownWidth;
+            if(searchBarWidth && searchDropDownWidth && viewportWidth){
+                let searchOptionWidth = `${((searchBarWidth - searchDropDownWidth)/viewportWidth)*100}vw`;
                 $('.search-bar--options').css('width',searchOptionWidth);
             }
         }
-    },[isSearchClicked,searchBarWidth,searchDropDownWidth])
+    },[isSearchClicked,searchBarWidth,searchDropDownWidth,viewportWidth]);
     
   return (
     <>

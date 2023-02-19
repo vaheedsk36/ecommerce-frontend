@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import BodyLayout from "./components/layouts/BodyLayout";
 
 function App() {
@@ -11,6 +12,13 @@ function App() {
           <h1>Work in progress</h1>
         </div>
       </BodyLayout>
+
+      <input type="number" />
+      <button type="submit" onClick={()=>{
+        
+        
+
+      }}>Submit</button>
     </div>
   );
 }
