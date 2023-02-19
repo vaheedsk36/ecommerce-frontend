@@ -1,4 +1,5 @@
 export type ICurrentLocation = {
     zipCode:number|undefined,
-    setZipCode:(arg:number)=>void
+    setZipCode:(arg:number)=>void,
+    locationUrl:string
 }
