@@ -62,9 +62,32 @@
 
 }
 
+.location--container{
+    display: flex;
+    color: #FFFFFF;
+
+
+}
+
+.location--label-container{
+    display: grid;
+    // align-items:
+
+    .location--label-city{
+        font-size: 0.7rem;
+    }
+
+    .location--label-user{
+        font-size: 1rem;
+    }
+}
+
 .location--btn{
     background-color: transparent;
     color: #FFFFFF;
     outline: none;
     border: none;
+    font-size: 1rem;
+    margin-bottom: 0;
+    padding: 10px 5px 0 5px;
 }

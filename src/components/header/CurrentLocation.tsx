@@ -23,10 +23,14 @@ const CurrentLocation:React.FC<ICurrentLocation> = ({zipCode,setZipCode,location
 
   return (
     <>
-      <div>
+      <div className='location--container'>
         <button className="location--btn">
           <FontAwesomeIcon icon={faLocationDot} onClick={() => refetch()} />
         </button>
+        <div className='location--label-container'>
+            <label className='location--label-city'>New Delhi 400071</label>
+            <label className='location--label-user'>Deliver to Nijo</label>
+        </div>
       </div>
     </>
   );
