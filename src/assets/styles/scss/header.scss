@@ -3,16 +3,21 @@
     width: 40vw;
     background-color: #FFFFFF;
     border-radius:5px;
-    margin-top: 1rem;
     height: 2.5rem;
+    margin:1rem
+}
+
+.search-bar-header{
+    display: flex;
+    align-items: center;
 }
 
 .search-bar--options{
     background-color: #FFFFFF;
     position: absolute;
-    left: 50px;
+    left: 6.8vw;
+    top: 5.8vh;
     height: 2.2rem;
-    width: 36.8rem;
     display: flex;
     align-items: center;
     border: 1px solid #BBBBBB;
@@ -59,27 +64,23 @@
     background-color: #007CB6;
     color: #FFFFFF;
     cursor: pointer;
-
 }
 
 .location--container{
     display: flex;
     color: #FFFFFF;
-
-
 }
 
 .location--label-container{
     display: grid;
-    // align-items:
+}
 
-    .location--label-city{
-        font-size: 0.7rem;
-    }
+.location--label-city{
+    font-size: 0.7rem;
+}
 
-    .location--label-user{
-        font-size: 1rem;
-    }
+.location--label-user{
+    font-size: 0.9rem;
 }
 
 .location--btn{
