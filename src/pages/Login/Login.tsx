@@ -16,12 +16,14 @@ const Login = () => {
   myHeaders.append("Content-Type", "application/json");
 
   const username = document.getElementById("formUsername").value;
+  const email = document.getElementById("formEmail").value;
   const password = document.getElementById("formPassword").value;
   const hashedPassword = await bcrypt.hash(password,10);
   const phoneNumber = document.getElementById("formNumber").value;
 
   var body = JSON.stringify({
     "username" : `${username}`,
+    "email" :  `${email}`,
     "password" : `${hashedPassword}`,
     "phone" : `${phoneNumber}`
   });
@@ -45,6 +47,10 @@ const Login = () => {
           <Form>
             <Form.Group controlId="formUsername">
               <Form.Control type="username" placeholder="Username" />          
+            </Form.Group>
+
+            <Form.Group controlId="formEmail">
+              <Form.Control type="email" placeholder="Email" />          
             </Form.Group>
 
             {/* <Form.Group controlId="formNumber">
