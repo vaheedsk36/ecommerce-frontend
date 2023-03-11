@@ -1,7 +1,5 @@
-@import "./fontawesome/scss/fontawesome.scss";
-@import "./fontawesome/scss/solid.scss";
-@import "./fontawesome/scss/brands.scss";
 @import 'layout';
+@import 'login';
 
 /*
 ! We are following BEM design convention for css.
@@ -11,16 +9,3 @@ $color_1: rgba(255, 255, 255, 0.87);
 $font-family_1: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $background-color_1: #242424;
 
-&:root {
-	font-family: $font-family_1;
-	line-height: 1.5;
-	font-weight: 400;
-	color-scheme: light dark;
-	color: $color_1;
-	background-color: $background-color_1;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-}

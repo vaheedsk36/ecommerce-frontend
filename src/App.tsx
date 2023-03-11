@@ -1,30 +1,21 @@
 // import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BodyLayout from "./components/layouts/BodyLayout";
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools'
+import Login from "./pages/Login/Login";
 
 const queryClient = new QueryClient();
 
 function App() {
-
-
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="App">
-        <BodyLayout>
-          <div style={{
-            height:'100rem'
-          }}>
-            <h1>Work in progress</h1>
-          </div>
-        </BodyLayout>
-
-        <input type="number" />
-        <button type="submit" onClick={()=>{
-        }}>Submit</button>
-      </div>
-      {/* <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/> */}
-    </QueryClientProvider>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </>    
   );
 }
 

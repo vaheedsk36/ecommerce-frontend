@@ -1,0 +1,41 @@
+@import 'color-codes';
+
+.login--container {
+    width: 100vw;
+    height: 100vh;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login--container-div {
+    background-color: $white;
+    height: 35rem;
+    width: 25rem;
+    align-items: center;
+    display : flex;
+    box-shadow: 0 0.1em 0.5em;
+    justify-content: center;
+
+    #formUsername, #formPassword, #formNumber {
+        margin-bottom: 4rem;
+        display: block;
+        height: 2rem;
+        width: 20rem;
+        text-align: center;
+        border-radius: .5em;
+        
+    }
+}
+
+.login--btn {
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    height: 2em;
+}
+
+.login-google { background-image: url("../../images/google.png");}
