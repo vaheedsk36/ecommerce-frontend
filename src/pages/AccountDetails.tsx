@@ -5,8 +5,8 @@ import { Link, Outlet } from 'react-router-dom';
 
 const AccountDetails = () => {
   return (
-    <>
     //TODO fix routing on button click for now routes are working when we enter from browser
+    <>
       <Link to="/account/login">
         <Button variant="warning">
           Login
