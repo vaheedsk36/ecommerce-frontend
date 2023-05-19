@@ -4,23 +4,27 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput from 'react-phone-number-input';
+import bcrypt from 'bcryptjs';  
  
 const Login = () => {
 
   const [phoneNumber, setPhoneNumber] = useState();
 
-  const loginHandler = () => {
+  const loginHandler = async () => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   const username = document.getElementById("formUsername").value;
+  const email = document.getElementById("formEmail").value;
   const password = document.getElementById("formPassword").value;
+  const hashedPassword = await bcrypt.hash(password,10);
   const phoneNumber = document.getElementById("formNumber").value;
 
   var body = JSON.stringify({
     "username" : `${username}`,
-    "password" : `${password}`,
+    "email" :  `${email}`,
+    "password" : `${hashedPassword}`,
     "phone" : `${phoneNumber}`
   });
 
@@ -47,6 +51,19 @@ const Login = () => {
             <Form.Group controlId="formUsername">
               <Form.Control type={"email"|"tel"} placeholder="Enter Email or Phone No" />          
             </Form.Group>
+
+            <Form.Group controlId="formEmail">
+              <Form.Control type="email" placeholder="Email" />          
+            </Form.Group>
+
+            {/* <Form.Group controlId="formNumber">
+              <PhoneInput
+                  id = "formNumber"
+                  placeholder="Enter phone number"
+                  value= {phoneNumber}
+                  onChange={setPhoneNumber}
+              />         
+            </Form.Group> */}
 
             <Form.Group controlId="formPassword">
               <Form.Control type="password" placeholder="Enter Password" />
