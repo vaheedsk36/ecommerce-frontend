@@ -9,8 +9,6 @@ import bcrypt from 'bcryptjs';
  
 const Login = () => {
 
-  const [phoneNumber, setPhoneNumber] = useState();
-
   const loginHandler = async () => {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -51,19 +49,6 @@ const Login = () => {
             <Form.Group controlId="formUsername">
               <Form.Control type={"email"|"tel"} placeholder="Enter Email or Phone No" />          
             </Form.Group>
-
-            <Form.Group controlId="formEmail">
-              <Form.Control type="email" placeholder="Email" />          
-            </Form.Group>
-
-            {/* <Form.Group controlId="formNumber">
-              <PhoneInput
-                  id = "formNumber"
-                  placeholder="Enter phone number"
-                  value= {phoneNumber}
-                  onChange={setPhoneNumber}
-              />         
-            </Form.Group> */}
 
             <Form.Group controlId="formPassword">
               <Form.Control type="password" placeholder="Enter Password" />
