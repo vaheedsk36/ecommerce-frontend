@@ -41,23 +41,28 @@ const Login = () => {
 
   return (
         <div className="login--container">
-          <div className="login--header">
+          <div className="login--container-div">
+          <div className="login--header text-center mb-2">
             <h1>Login</h1>
             <label>Don't have a account? <a href="#">Create a new account</a></label>
           </div>
           <Form>
             <Form.Group controlId="formUsername">
+              <Form.Label>Email or Phone No</Form.Label>
               <Form.Control type={"email"|"tel"} placeholder="Enter Email or Phone No" />          
             </Form.Group>
 
             <Form.Group controlId="formPassword">
+              <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Enter Password" />
             </Form.Group>
 
-            <Button variant="primary" className='login--btn' type="button" onClick={loginHandler}>
+            <Button variant="warning" className='login--btn mt-4 fs-4' type="button" onClick={loginHandler}>
               Login
             </Button>
           </Form>
+          </div>
+
         </div>
   )
 }
