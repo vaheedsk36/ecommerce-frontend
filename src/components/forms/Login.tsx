@@ -42,7 +42,7 @@ const Login = () => {
   return (
         <div className="login--container">
           <div className="login--container-div">
-          <div className="login--header text-center mb-2">
+          <div className="login--header text-center mt-4">
             <h1>Login</h1>
             <label className="mt-3">Don't have a account? <a href="#">Create a new account</a></label>
           </div>
@@ -57,7 +57,7 @@ const Login = () => {
               <Form.Control type="password" placeholder="Enter Password" />
             </Form.Group>
 
-            <Button variant="warning" className='login--btn mt-4 fs-4' type="button" onClick={loginHandler}>
+            <Button variant="warning" className='login--btn fs-4' type="button" onClick={loginHandler}>
               Login
             </Button>
           </Form>

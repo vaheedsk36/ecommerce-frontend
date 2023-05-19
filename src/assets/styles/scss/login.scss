@@ -3,7 +3,7 @@
     display: grid;
     align-items: center;
     height: 4rem;
-    width: 25vw;
+    width: 30rem;
     margin: 0 auto;
     font-size: 1.2rem;
     border-radius: 0;
@@ -13,14 +13,21 @@
 }
 
 .login--container {
-    margin: 12% auto;
-    height: 60vh;
-    width: 30vw;
-    box-shadow: 0 0.1em 0.5em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: grid;
     align-items: center;
+    justify-content: center;
 
     .login--container-div{
+        height: 36rem;
+        width: 35rem;
+        box-shadow: 0 0.1em 0.5em;
+        display: grid;
+        align-items: center;
     
         .form-label, #formUsername, #formPassword, #formNumber{
             @include login-component;
@@ -28,6 +35,7 @@
         }
          .login--btn {
          @include login-component;
+         margin: 2rem auto;
         }
         
     }
