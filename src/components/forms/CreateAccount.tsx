@@ -44,7 +44,7 @@ const Login = () => {
           <div className="login--container-div">
           <div className="login--header text-center mb-2">
             <h1>Login</h1>
-            <label>Don't have a account? <a href="#">Create a new account</a></label>
+            <label className="mt-3">Don't have a account? <a href="#">Create a new account</a></label>
           </div>
           <Form>
             <Form.Group controlId="formUsername">

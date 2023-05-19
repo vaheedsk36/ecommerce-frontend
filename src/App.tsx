@@ -2,9 +2,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BodyLayout from "./components/layouts/BodyLayout";
 import { QueryClientProvider, QueryClient } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools'
-import Login from "./pages/Login/Login";
-
+import { ReactQueryDevtools } from 'react-query/devtools';
+import AccountFormsPage from "./pages/AccountFormsPage";
 const queryClient = new QueryClient();
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/account/login" element={<AccountFormsPage/>} />
         </Routes>
       </BrowserRouter>
     </>    
