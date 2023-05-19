@@ -7,58 +7,22 @@ import Form from 'react-bootstrap/Form';
 import PhoneInput from 'react-phone-number-input';
 import bcrypt from 'bcryptjs';  
  
-const Login = () => {
-
-  const loginHandler = async () => {
-  var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-
-  const username = document.getElementById("formUsername").value;
-  const email = document.getElementById("formEmail").value;
-  const password = document.getElementById("formPassword").value;
-  const hashedPassword = await bcrypt.hash(password,10);
-  const phoneNumber = document.getElementById("formNumber").value;
-
-  var body = JSON.stringify({
-    "username" : `${username}`,
-    "email" :  `${email}`,
-    "password" : `${hashedPassword}`,
-    "phone" : `${phoneNumber}`
-  });
-
-  var requestOptions : any = {
-    method: 'POST',
-    headers: myHeaders,
-    body,
-    redirect: 'follow'
-  };
-
-  fetch("http://localhost:35000/api/v1/account/register", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  }
+const CreateAccount = () => {
 
   return (
         <div className="login--container">
           <div className="login--container-div">
           <div className="login--header text-center mb-2">
-            <h1>Login</h1>
-            <label className="mt-3">Don't have a account? <a href="#">Create a new account</a></label>
-          </div>
+            <h1>Create New Account</h1>
+            </div>
           <Form>
             <Form.Group controlId="formUsername">
               <Form.Label>Email or Phone No</Form.Label>
               <Form.Control type={"email"|"tel"} placeholder="Enter Email or Phone No" />          
             </Form.Group>
 
-            <Form.Group controlId="formPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Enter Password" />
-            </Form.Group>
-
-            <Button variant="warning" className='login--btn mt-4 fs-4' type="button" onClick={loginHandler}>
-              Login
+            <Button variant="warning" className='login--btn mt-4 fs-4' type="button">
+              Submit
             </Button>
           </Form>
           </div>
@@ -67,4 +31,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default CreateAccount;
