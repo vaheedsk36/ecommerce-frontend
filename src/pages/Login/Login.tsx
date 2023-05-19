@@ -38,36 +38,25 @@ const Login = () => {
   }
 
   return (
-    <div className="login--container">
-        <div className="login--container-div">
+        <div className="login--container">
+          <div className="login--header">
+            <h1>Login</h1>
+            <label>Don't have a account? <a href="#">Create a new account</a></label>
+          </div>
           <Form>
             <Form.Group controlId="formUsername">
-              <Form.Control type="username" placeholder="Username" />          
+              <Form.Control type={"email"|"tel"} placeholder="Enter Email or Phone No" />          
             </Form.Group>
-
-            {/* <Form.Group controlId="formNumber">
-              <PhoneInput
-                  id = "formNumber"
-                  placeholder="Enter phone number"
-                  value= {phoneNumber}
-                  onChange={setPhoneNumber}
-              />         
-            </Form.Group> */}
 
             <Form.Group controlId="formPassword">
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Enter Password" />
             </Form.Group>
 
-            <Form.Group controlId="formNumber">
-              <Form.Control type="tel" placeholder="Phone Number" />
-            </Form.Group>
             <Button variant="primary" className='login--btn' type="button" onClick={loginHandler}>
               Login
             </Button>
           </Form>
         </div>
-    </div>
-    
   )
 }
 

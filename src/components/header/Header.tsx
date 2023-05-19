@@ -1,4 +1,3 @@
-import React from 'react'
 import SearchBarHeader from './SearchBarHeader'
 
 const Header = () => {
