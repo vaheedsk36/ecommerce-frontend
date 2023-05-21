@@ -1,11 +1,13 @@
 // @ts-nocheck
-import React, { useState } from 'react';
+import React from 'react';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import PhoneInput from 'react-phone-number-input';
-import bcrypt from 'bcryptjs';  
+import bcrypt from 'bcryptjs';
+import { ReactComponent as GoogleIcon } from "../../assets/images/google.svg";
+  
  
 const Login = () => {
 
@@ -59,6 +61,14 @@ const Login = () => {
 
             <Button variant="warning" className='login--btn fs-4' type="button" onClick={loginHandler}>
               Login
+            </Button>
+
+            <div className='fs-5 text-center my-0'>Or</div>
+
+            <Button variant="light" className='login--btn fs-4 my-3' type="button" onClick={loginHandler}>
+              <div className="d-flex justify-content-center align-items-center">
+              <GoogleIcon width="25px" height="25px"/> <span className='mx-2'>Sign in with Google</span>
+              </div>
             </Button>
           </Form>
           </div>
