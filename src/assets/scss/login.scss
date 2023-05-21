@@ -37,6 +37,10 @@
          @include login-component;
          margin: 1.2rem auto;
         }
+        a{
+            color:inherit; 
+            text-decoration:none;
+        }
         
     }
 
