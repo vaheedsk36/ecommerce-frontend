@@ -15,13 +15,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/account" element={<AccountDetails/>}>
-            <Route path="login" element={<Login/>} />
-            <Route path="create-new-account" element={<CreateAccount/>} />
+          <Route path='/session/oauth/google' element={<>
+            <h1>
+              Authorized
+            </h1>
+          </>} />
+          <Route path="/account" element={<AccountDetails />}>
+            <Route path="login" element={<Login />} />
+            <Route path="create-new-account" element={<CreateAccount />} />
           </Route>
         </Routes>
       </BrowserRouter>
-    </>    
+    </>
   );
 }
 
