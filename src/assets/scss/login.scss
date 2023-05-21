@@ -2,7 +2,7 @@
 @mixin login-component {
     display: grid;
     align-items: center;
-    height: 4rem;
+    height: 3.5rem;
     width: 30rem;
     margin: 0 auto;
     font-size: 1.2rem;
@@ -35,7 +35,7 @@
         }
          .login--btn {
          @include login-component;
-         margin: 2rem auto;
+         margin: 1.2rem auto;
         }
         
     }
